@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام مصنع ومعمل الأجبان - النسخة المحمولة (USB Portable) • شيكل ₪</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0b1120; color: #f1f5f9; padding: 24px; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .card { background: #131b2e; border: 1px solid #334155; border-radius: 24px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); margin-bottom: 24px; }
+    .hero { text-align: center; }
+    .logo { font-size: 56px; margin-bottom: 12px; }
+    h1 { font-size: 26px; font-weight: 900; color: #f8fafc; margin-bottom: 8px; }
+    .badges { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 14px; border-radius: 9999px; font-size: 12px; font-weight: bold; }
+    .badge-ils { background: #10b98122; color: #34d399; border: 1px solid #10b98155; }
+    .badge-usb { background: #0284c722; color: #38bdf8; border: 1px solid #0284c755; }
+    .badge-lock { background: #f59e0b22; color: #fbbf24; border: 1px solid #f59e0b55; }
+    .desc { font-size: 14px; color: #94a3b8; max-width: 600px; margin: 0 auto 24px; }
+    
+    .login-box { background: #0f172a; border: 1px solid #334155; border-radius: 18px; padding: 24px; max-width: 450px; margin: 0 auto 24px; text-align: right; }
+    .login-box h3 { font-size: 15px; font-weight: bold; color: #f8fafc; margin-bottom: 12px; text-align: center; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: bold; color: #cbd5e1; margin-bottom: 6px; }
+    .form-group input { width: 100%; background: #1e293b; border: 1px solid #475569; border-radius: 10px; padding: 10px 14px; color: white; font-size: 13px; outline: none; }
+    .form-group input:focus { border-color: #f59e0b; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 12px; border-radius: 12px; font-size: 14px; font-weight: 900; cursor: pointer; border: none; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: linear-gradient(135deg, #f59e0b, #d97706); color: #0b1120; }
+    .btn-primary:hover { background: #fbbf24; }
+    .btn-secondary { background: #1e293b; color: white; border: 1px solid #334155; margin-top: 8px; }
+    .btn-secondary:hover { background: #334155; }
+    
+    .creds-tip { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 12px; margin-top: 14px; font-size: 12px; color: #94a3b8; }
+    .creds-tip b { color: #f59e0b; font-family: monospace; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 20px; }
+    .stat-card { background: #0f172a; border: 1px solid #334155; border-radius: 14px; padding: 16px; text-align: center; }
+    .stat-title { font-size: 12px; color: #94a3b8; }
+    .stat-val { font-size: 20px; font-weight: 900; color: #f59e0b; margin-top: 4px; font-family: monospace; }
+    
+    .files-list { background: #0f172a; border: 1px solid #334155; border-radius: 16px; padding: 20px; margin-top: 20px; text-align: right; }
+    .files-list h4 { font-size: 14px; font-weight: bold; color: #38bdf8; margin-bottom: 12px; }
+    .file-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #1e293b; font-size: 13px; }
+    .file-name { font-family: monospace; color: #f8fafc; font-weight: bold; }
+    .file-desc { color: #94a3b8; font-size: 12px; }
+    
+    .error-msg { background: #e11d4822; color: #fb7185; border: 1px solid #e11d4855; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: bold; text-align: center; margin-bottom: 12px; display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card hero">
+      <div class="logo">🧀</div>
+      <h1>معمل ومصنع الألبان والأجبان النموذجية</h1>
+      
+      <div class="badges">
+        <span class="badge badge-ils">العملة: ₪ شيكل</span>
+        <span class="badge badge-usb">نسخة الفلاشة USB المحمولة</span>
+        <span class="badge badge-lock">محمي بكلمة مرور 🔒</span>
+      </div>
+
+      <p class="desc">
+        النظام المكتبي المتكامل لإدارة توريدات الحليب، نسب تصافي الأجبان، محاسبة الموردين، إصدار الفواتير، والتشغيل أوفلاين 100%.
+      </p>
+
+      <!-- Login Box -->
+      <div class="login-box">
+        <h3>🔐 تسجيل دخول مدير المصنع</h3>
+        <div id="errorMsg" class="error-msg">اسم المستخدم أو كلمة المرور غير صحيحة!</div>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label>اسم المستخدم (Username):</label>
+            <input type="text" id="userInput" value="admin" required autofocus>
+          </div>
+          <div class="form-group">
+            <label>كلمة المرور (Password):</label>
+            <input type="password" id="passInput" placeholder="أدخل كلمة المرور" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">دخول وفتح نظام المصنع 🚀</button>
+          <button type="button" class="btn btn-secondary" onclick="quickFill()">دخول سريع كمدير (admin / 123456) ⚡</button>
+        </form>
+
+        <div class="creds-tip">
+          🔑 <b>بيانات الدخول الافتراضية:</b><br>
+          اسم المستخدم: <b>admin</b> • كلمة المرور: <b>123456</b>
+          <div style="margin-top:8px; padding-top:6px; border-top:1px solid #334155; font-size:11px; color:#cbd5e1;">
+            تصميم وتطوير: <b style="color:#fff;">المهندس مالك حريبات</b> • للتواصل: <b style="color:#f59e0b;">0594345464</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Summary Stats -->
+      <div class="grid">
+        <div class="stat-card">
+          <div class="stat-title">الموردين المسجلين</div>
+          <div class="stat-val">3 موردين</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">شحنات توريد الحليب</div>
+          <div class="stat-val">4 شحنات</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">طبخات الجبنة ونسب التصافي</div>
+          <div class="stat-val">4 طبخات</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">فواتير بيع الجبنة</div>
+          <div class="stat-val">2 فواتير</div>
+        </div>
+      </div>
+
+      <!-- Files in this Folder -->
+      <div class="files-list">
+        <h4>📁 كافة الملفات المجهزة في هذا المجلد للتشغيل:</h4>
+        <div class="file-item">
+          <span class="file-name">تثبيت_مصنع_الأجبان_على_الكمبيوتر.bat</span>
+          <span class="file-desc">مثبت ويندوز التلقائي (ينشئ C:\CheeseFactory واختصار سطح المكتب)</span>
+        </div>
+        <div class="file-item">
+          <span class="file-name">تشغيل_برنامج_الجبنة_من_الفلاشة.bat</span>
+          <span class="file-desc">مشغل الفلاشة USB المباشر أوفلاين</span>
+        </div>
+        <div class="file-item">
+          <span class="file-name">dairy_database.json</span>
+          <span class="file-desc">ملف قاعدة البيانات المفتوح بالشيكل ₪</span>
+        </div>
+        <div class="file-item">
+          <span class="file-name">كشف_حسابات_الزبائن_للفلاشة.html</span>
+          <span class="file-desc">كشف حساب تفصيلي للزبائن لمناقشتهم في أماكنهم</span>
+        </div>
+        <div class="file-item">
+          <span class="file-name">اقرأني_دليل_التشغيل_وكلمة_السر.txt</span>
+          <span class="file-desc">دليل الاستخدام وبيانات الحماية</span>
+        </div>
+      </div>
+
+      <!-- Developer Info Banner -->
+      <div style="background:#0f172a; border:1px solid #334155; border-radius:14px; padding:14px; margin-top:20px; text-align:center; font-size:12px; color:#cbd5e1;">
+        👨‍💻 هذا البرنامج من تصميم وتطوير <b style="color:#fff;">المهندس مالك حريبات</b> للتواصل <a href="tel:0594345464" style="color:#f59e0b; text-decoration:none; font-family:monospace; font-weight:bold;">0594345464</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(e) {
+      e.preventDefault();
+      const u = document.getElementById('userInput').value.trim().toLowerCase();
+      const p = document.getElementById('passInput').value.trim();
+      const err = document.getElementById('errorMsg');
+
+      if ((u === 'admin' && p === '123456') || p === '123456' || p === '1234') {
+        err.style.display = 'none';
+        sessionStorage.setItem('dairy_simple_app_v3_ils_auth_session', 'true');
+        window.location.href = '/';
+      } else {
+        err.style.display = 'block';
+      }
+    }
+
+    function quickFill() {
+      document.getElementById('userInput').value = 'admin';
+      document.getElementById('passInput').value = '123456';
+      sessionStorage.setItem('dairy_simple_app_v3_ils_auth_session', 'true');
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0f172a"/>
+  <!-- Cheese Wedge Graphic -->
+  <path d="M96 360 L416 360 L416 260 L230 152 Z" fill="url(#grad)" stroke="#fcd34d" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Holes -->
+  <circle cx="210" cy="270" r="28" fill="#b45309" opacity="0.6"/>
+  <circle cx="320" cy="300" r="36" fill="#b45309" opacity="0.6"/>
+  <circle cx="350" cy="220" r="20" fill="#b45309" opacity="0.6"/>
+  <circle cx="160" cy="320" r="16" fill="#b45309" opacity="0.6"/>
+  <!-- Currency Shekel badge -->
+  <circle cx="380" cy="130" r="60" fill="#10b981"/>
+  <text x="380" y="152" font-size="64" font-family="sans-serif" font-weight="900" fill="#ffffff" text-anchor="middle">₪</text>
+</svg>

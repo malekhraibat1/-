@@ -1,0 +1,210 @@
+{
+  "version": "3.0.0",
+  "currency": "شيكل",
+  "exportedAt": "2026-10-10T10:00:00.000Z",
+  "settings": {
+    "workshopName": "معمل ومصنع الألبان والأجبان النموذجية",
+    "phone": "0599123456 / 0568123456",
+    "address": "المنطقة الصناعية والزراعية - شارع المزارع",
+    "currency": "شيكل",
+    "defaultMilkPrice": 3.2,
+    "defaultCheesePrice": 28.0,
+    "username": "admin",
+    "password": "123456",
+    "pinCode": "1234",
+    "isPasswordProtected": true
+  },
+  "suppliers": [
+    {
+      "id": "SUP-1",
+      "name": "أبو محمد الزعبي (مزرعة السهول)",
+      "phone": "0599-887766",
+      "location": "السهول الشرقية",
+      "pricePerLiterDefault": 3.2,
+      "initialBalance": 0,
+      "notes": "حليب أبقار طازج يومي وردية الصباح - فحص ممتاز"
+    },
+    {
+      "id": "SUP-2",
+      "name": "الحاج خالد العمري (مزرعة الوادي)",
+      "phone": "0598-112233",
+      "location": "منطقة الوادي الأخضر",
+      "pricePerLiterDefault": 3.4,
+      "initialBalance": 450,
+      "notes": "حليب خليط بقر وغنم ممتاز للجبنة البلدية والحلوم"
+    },
+    {
+      "id": "SUP-3",
+      "name": "أبو أحمد النجار (مزرعة البركة)",
+      "phone": "0595-445566",
+      "location": "الريف الشمالي",
+      "pricePerLiterDefault": 3.2,
+      "initialBalance": -200,
+      "notes": "حليب طازج - رصيد سابق دائن لنا 200 شيكل"
+    }
+  ],
+  "milkSupplies": [
+    {
+      "id": "MS-101",
+      "date": "2026-10-01",
+      "supplierId": "SUP-1",
+      "supplierName": "أبو محمد الزعبي (مزرعة السهول)",
+      "quantityLiters": 600,
+      "pricePerLiter": 3.2,
+      "totalAmount": 1920,
+      "paymentType": "نقداً",
+      "paidCash": 1920,
+      "paidCheque": 0,
+      "totalPaid": 1920,
+      "balanceRemaining": 0,
+      "balanceType": "خالص",
+      "notes": "توريد الصباح الباكر - تم تسليم المبلغ نقداً بالكامل بالشيكل"
+    },
+    {
+      "id": "MS-102",
+      "date": "2026-10-02",
+      "supplierId": "SUP-2",
+      "supplierName": "الحاج خالد العمري (مزرعة الوادي)",
+      "quantityLiters": 850,
+      "pricePerLiter": 3.4,
+      "totalAmount": 2890,
+      "paymentType": "شيك",
+      "paidCash": 0,
+      "paidCheque": 2500,
+      "totalPaid": 2500,
+      "chequeDetails": {
+        "chequeHolderName": "الحاج خالد العمري",
+        "chequeNumber": "CHQ-88412",
+        "chequeDate": "2026-10-25",
+        "bankName": "بنك فلسطين",
+        "amount": 2500
+      },
+      "balanceRemaining": 390,
+      "balanceType": "علينا",
+      "notes": "تسليم شيك بنكي بقيمة 2500 شيكل، وباقي له بذمتنا 390 شيكل"
+    },
+    {
+      "id": "MS-103",
+      "date": "2026-10-03",
+      "supplierId": "SUP-1",
+      "supplierName": "أبو محمد الزعبي (مزرعة السهول)",
+      "quantityLiters": 500,
+      "pricePerLiter": 3.2,
+      "totalAmount": 1600,
+      "paymentType": "نقداً وشيك",
+      "paidCash": 600,
+      "paidCheque": 1000,
+      "totalPaid": 1600,
+      "chequeDetails": {
+        "chequeHolderName": "أبو محمد الزعبي",
+        "chequeNumber": "CHQ-99104",
+        "chequeDate": "2026-11-05",
+        "bankName": "البنك العربي",
+        "amount": 1000
+      },
+      "balanceRemaining": 0,
+      "balanceType": "خالص",
+      "notes": "دفعة كاش 600 شيكل + شيك 1000 شيكل - الحساب خالص"
+    },
+    {
+      "id": "MS-104",
+      "date": "2026-10-04",
+      "supplierId": "SUP-3",
+      "supplierName": "أبو أحمد النجار (مزرعة البركة)",
+      "quantityLiters": 400,
+      "pricePerLiter": 3.2,
+      "totalAmount": 1280,
+      "paymentType": "آجل (ذمة)",
+      "paidCash": 0,
+      "paidCheque": 0,
+      "totalPaid": 0,
+      "balanceRemaining": 1280,
+      "balanceType": "علينا",
+      "notes": "توريد آجل يسوى نهاية الأسبوع"
+    }
+  ],
+  "productions": [
+    {
+      "id": "PRD-201",
+      "date": "2026-10-01",
+      "supplierId": "SUP-1",
+      "supplierName": "أبو محمد الزعبي (مزرعة السهول)",
+      "milkUsedLiters": 600,
+      "cheeseProducedKg": 82.5,
+      "yieldPercentage": 13.75,
+      "litersPerKgCheese": 7.27,
+      "cheeseType": "جبنة بيضاء بلدية",
+      "notes": "طبخة جبنة بيضاء مغلية ممتازة - تصافي مرتفع 13.75%"
+    },
+    {
+      "id": "PRD-202",
+      "date": "2026-10-02",
+      "supplierId": "SUP-2",
+      "supplierName": "الحاج خالد العمري (مزرعة الوادي)",
+      "milkUsedLiters": 500,
+      "cheeseProducedKg": 71.0,
+      "yieldPercentage": 14.2,
+      "litersPerKgCheese": 7.04,
+      "cheeseType": "جبنة حلوم بلدي",
+      "notes": "طبخة حلوم ممتازة بفضل نسبة دسم الحليب العالية"
+    },
+    {
+      "id": "PRD-203",
+      "date": "2026-10-02",
+      "supplierId": "SUP-2",
+      "supplierName": "الحاج خالد العمري (مزرعة الوادي)",
+      "milkUsedLiters": 350,
+      "cheeseProducedKg": 44.0,
+      "yieldPercentage": 12.57,
+      "litersPerKgCheese": 7.95,
+      "cheeseType": "جبنة عكاوي",
+      "notes": "طبخة عكاوي تحلية خفيفة للحلويات"
+    },
+    {
+      "id": "PRD-204",
+      "date": "2026-10-03",
+      "supplierId": "SUP-1",
+      "supplierName": "أبو محمد الزعبي (مزرعة السهول)",
+      "milkUsedLiters": 500,
+      "cheeseProducedKg": 69.0,
+      "yieldPercentage": 13.8,
+      "litersPerKgCheese": 7.25,
+      "cheeseType": "جبنة نابلسية بالقزحة والمحلب",
+      "notes": "جبنة نابلسية متبلة بحبة البركة والمحلب للتخزين"
+    }
+  ],
+  "salesInvoices": [
+    {
+      "id": "INV-1001",
+      "invoiceNumber": "INV-2026-001",
+      "date": "2026-10-02",
+      "customerName": "سوبرماركت الأمانة (أبو يوسف)",
+      "customerPhone": "0599-223344",
+      "customerAddress": "شارع القدس الرئيسي",
+      "cheeseType": "جبنة بيضاء بلدية",
+      "quantityKg": 35,
+      "pricePerKg": 28.0,
+      "totalAmount": 980,
+      "paymentMethod": "نقداً",
+      "paidAmount": 980,
+      "remainingAmount": 0,
+      "notes": "فاتورة مسددة كاش بالكامل بالشيكل"
+    },
+    {
+      "id": "INV-1002",
+      "invoiceNumber": "INV-2026-002",
+      "date": "2026-10-03",
+      "customerName": "مطاعم وفطاير الضيافة",
+      "customerPhone": "0598-778899",
+      "customerAddress": "منطقة السوق التجاري",
+      "cheeseType": "جبنة عكاوي + جبنة حلوم بلدي",
+      "quantityKg": 45,
+      "pricePerKg": 29.5,
+      "totalAmount": 1327.5,
+      "paymentMethod": "شيك",
+      "paidAmount": 1000,
+      "remainingAmount": 327.5,
+      "notes": "شيك بمبلغ 1000 شيكل، ومتبقي ذمة 327.5 شيكل"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[AutoRun]
+open=تشغيل_برنامج_الجبنة_من_الفلاشة.bat
+action=تشغيل نظام إدارة مصنع ومعمل الأجبان
+icon=icon.svg
+label=مصنع الأجبان (USB Portable)
